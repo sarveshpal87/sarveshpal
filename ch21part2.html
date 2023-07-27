@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div1 {
+        background-color: beige;
+        margin: 4px;
+        padding: 3px;
+        border: 3px solid black;
+       display: flex;
+    }
+@media(min-width:540px)
+{.div1{flex-direction: row;
+}}
+@media(max-width:640px){
+.div1{
+    flex-direction: column;
+}
+}
+    .div {
+        height: 200px;
+        width: 200px;
+        border: 3px solid brown;
+        margin: 4px;
+        padding: 3px;
+    }
+
+    
+    #b1 {
+        background-color: aqua;
+    }
+
+    #b2 {
+        background-color: blue;
+    }
+
+    #b3 {
+        background-color: orange;
+    }
+
+    #b4 {
+        background-color: brown;
+    }
+
+</style>
+<body>
+    
+    <div class="div1">
+        <div class="div" id="b1"></div>
+        <div class="div" id="b2"></div>
+        <div class="div" id="b3"></div>
+        <div class="div" id="b4"></div>
+    </div>
+</body>
+</html>

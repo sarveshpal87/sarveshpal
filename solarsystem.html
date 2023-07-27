@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+margin: 0;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: black;
+overflow: hidden;
+}
+.container{
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+position: relative;
+}
+.sun{
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+
+}
+.earth,.moon{
+    position:absolute ;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-radius: 50%;
+    border-width: 0.1em 0.1em 0 0;
+
+}
+.earth{
+    top: 0;
+    right: 0;
+    width: 30em;
+    height: 30em;
+    animation: moonlight 7s linear infinite;
+}
+.moon{
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em;
+    animation: moonlight 3.7s linear infinite;
+}
+.earth::before,
+.moon::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+.earth::before{
+    top: 2.8em;
+    right:2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;
+
+}
+.moon::before{
+    top: 0.8em;
+    right:0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+@keyframes moonlight{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.star span{
+    height: 120px;
+    width: 120px;
+    font-size: 1.5em;
+    box-shadow: 0 1em  1em white;
+    border-radius: 50%;
+
+}
+.star1 span{
+    top: 10em;
+    left: 110em;
+    font-size: 1em;
+    box-shadow: 0 1em 1em yellow;
+    border-radius: 50%;
+}
+.star2 span{
+    color: rgb(255,255,255);
+    margin-top: 15em;
+    margin-left: 25em;
+
+    font-size: 1em;
+    box-shadow: 0 1em 1em rgb(103,101,101);
+    border-radius: 50%;
+}
+.star3 span{
+    color: rgb(17,177,245);
+    margin-top: 30em;
+   
+
+    font-size: 1.2em;
+    box-shadow: 0 1em 1em rgb(76,130,130);
+    border-radius: 50%;
+}
+.star4 span{
+    color: rgb(245,44,17);
+    margin-top: -40em;
+    margin-left: 12em;
+
+    font-size: 1em;
+    box-shadow: 0 1em 1em rgb(128,82,82);
+    border-radius: 50%;
+}
+.star5 span{
+    color: rgb(203,245,17);
+    margin-top: -40em;
+    margin-left: -3em;
+
+    font-size: 1em;
+    box-shadow: 0 1em 1em rgb(124,155,74);
+    border-radius: 50%;
+    float: left;
+}
+.star6 span{
+    color: rgb(203,245,17);
+    margin-top: 40em;
+    margin-left: 11em;
+float: left;
+    font-size: 1em;
+    box-shadow: 0 1em 1em rgb(125,147,102);
+    border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+    <div class="star5"><span>&#10031;</span></div>
+    <div class="star3"><span>&bigstar;</span></div>
+    <div class="container">
+        <div class="star"><span>&#10024;</span></div>
+        <div class="sun"></div>
+        <div class="earth">
+    <div class="moon"></div></div>
+    </div>
+    <div class="star4"><span>&bigstar;</span></div>
+    <div class="star1"><span>&#10024;</span></div>
+    <div class="star2"><span>&bigstar;</span></div>
+    <div class="star6"><span>&#10031;</span></div>
+</body>
+</html>
