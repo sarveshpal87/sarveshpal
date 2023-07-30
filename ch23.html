@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation ki Duniya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 10 0vh;
+            background-color: beige;
+            border: solid;
+        }
+
+        .box {
+            width: 250px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 10px;
+            margin: 10px;
+            border: 3px solid red;
+            animation-name: rightmovement;
+            position: relative;
+            /* animation-duration: 5s;
+            animation-iteration-count:3 ; */
+            /* animation-delay: 3s; */
+            /* animation-timing-function: ease-in-out; */
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            /* animation-direction: alternate; */
+            /* animation-fill-mode: forwards; */
+            /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+            animation: 5s linear 3s infinite alternate both running rightmovement;
+
+        }
+
+        @keyframes rightmovement {
+            from {
+                top: 0;
+                left: 0;
+            }
+
+            to {
+                top: 0;
+                left: 1200px;
+            }
+        }
+
+        .box2 {
+            width: 250px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 10px;
+            margin: 10px;
+            border: 3px solid red;
+            position: relative;
+            animation: 5s linear 3s infinite alternate both running leftmovement;
+        }
+        
+        @keyframes leftmovement {
+            from {
+                top: 650px;
+                left:1350px;
+            }
+
+            to {
+                top: 650px;
+                left: 0px;
+            }
+        }
+        .circle{
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            border-radius: 500px;
+            margin: 10px;
+            border: 3px solid yellowgreen;
+            position: relative;
+            animation: 10s ease-in-out 0s infinite alternate none running circlemovement;
+     top: 30%;
+     left: 40%;
+        }
+        @keyframes circlemovement {
+            0% {
+                top: 1%;
+                left:5%;
+            }
+
+            30% {
+                top: 5%;
+                left: 90%;
+            }
+            60%{
+top: 90%;
+left: 10%;
+
+            }
+            100%{
+top: 95%;
+left: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="circle"></div>
+        <div class="box2"></div>
+    </div>
+ 
+</body>
+
+</html>
